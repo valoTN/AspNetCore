@@ -1,0 +1,16 @@
+﻿@model GroupViewModel
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <form asp-controller="Group" asp-action="Edit" asp-route-id="@Model.Id" method="post">
+        <label asp-for="Name">Name</label>
+        <input asp-for="Name" />
+        <button type="submit">Save</button>
+    </form>
+</body>
+</html>

@@ -1,0 +1,21 @@
+﻿@model IEnumerable<GroupViewModel>;
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>AspNetCore</title>
+</head>
+<body>
+    <h1>Hello</h1>
+
+    <ul>
+        @foreach (var group in Model)
+        {
+            <li>@group.Name <a asp-controller="Group" asp-action="Details" asp-route-id="@group.Id">Edit</a></li>
+        }
+    </ul>
+
+    <a asp-controller="Group" asp-action="Create">Create</a>
+</body>
+</html>
